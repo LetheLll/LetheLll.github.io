@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="Neural Network Pruning[HRank: Filter Pruning using High-Rank Feature Map](HRank: Filter Pruning Using High-Rank Feature Map (thecvf.com))[CVPR 20’] [Accelerate CNNs from Three Dimensions: A Comprehens">
+<meta name="description" content="多目标剪枝网络剪枝的的背景： 过参数化 轻量化设备的模型 网络推理速度  很自然的两个目标就是  accuracy 模型大小  最直观的思路，两个目标直接做多目标优化  A Knee-Guided Evolutionary Algorithm for Compressing Deep Neural Networks    :heavy_check_mark: Evolutionary Shallo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Neural Network Pruning">
-<meta property="og:url" content="http://example.com/2021/06/04/Neural-Network-Pruning/index.html">
+<meta property="og:title" content="Multi-Objective Neural Network Pruning">
+<meta property="og:url" content="http://example.com/2021/06/04/Multi-Objective-Neural-Network-Pruning/index.html">
 <meta property="og:site_name" content="Lethe&#39;Blog">
-<meta property="og:description" content="Neural Network Pruning[HRank: Filter Pruning using High-Rank Feature Map](HRank: Filter Pruning Using High-Rank Feature Map (thecvf.com))[CVPR 20’] [Accelerate CNNs from Three Dimensions: A Comprehens">
+<meta property="og:description" content="多目标剪枝网络剪枝的的背景： 过参数化 轻量化设备的模型 网络推理速度  很自然的两个目标就是  accuracy 模型大小  最直观的思路，两个目标直接做多目标优化  A Knee-Guided Evolutionary Algorithm for Compressing Deep Neural Networks    :heavy_check_mark: Evolutionary Shallo">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-06-04T07:41:19.000Z">
-<meta property="article:modified_time" content="2021-06-04T07:42:08.753Z">
+<meta property="article:published_time" content="2021-06-04T07:56:32.000Z">
+<meta property="article:modified_time" content="2021-06-04T07:57:44.058Z">
 <meta property="article:author" content="Wu Jia-Liang">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2021/06/04/Neural-Network-Pruning/"/>
+  <link rel="canonical" href="http://example.com/2021/06/04/Multi-Objective-Neural-Network-Pruning/"/>
 
 
 
 
 
-  <title>Neural Network Pruning | Lethe'Blog</title>
+  <title>Multi-Objective Neural Network Pruning | Lethe'Blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/04/Neural-Network-Pruning/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/04/Multi-Objective-Neural-Network-Pruning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Neural Network Pruning</h1>
+          <h1 class="post-title" itemprop="name headline">Multi-Objective Neural Network Pruning</h1>
         
 
         <div class="post-meta">
@@ -261,7 +261,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-04T15:41:19+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-04T15:56:32+08:00">
                 2021-06-04
               </time>
             
@@ -299,11 +299,38 @@
       
 
       
-        <h1 id="Neural-Network-Pruning"><a href="#Neural-Network-Pruning" class="headerlink" title="Neural Network Pruning"></a>Neural Network Pruning</h1><p>[HRank: Filter Pruning using High-Rank Feature Map](<a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Lin_HRank_Filter_Pruning_Using_High-Rank_Feature_Map_CVPR_2020_paper.pdf">HRank: Filter Pruning Using High-Rank Feature Map (thecvf.com)</a>)<em>[CVPR 20’]</em></p>
-<p>[Accelerate CNNs from Three Dimensions: A Comprehensive Pruning Framework](<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.04879.pdf">Accelerate CNNs from Three Dimensions: A Comprehensive Pruning Framework (arxiv.org)</a>) <em>[ICML 21’]</em></p>
+        <h1 id="多目标剪枝"><a href="#多目标剪枝" class="headerlink" title="多目标剪枝"></a>多目标剪枝</h1><h5 id="网络剪枝的的背景："><a href="#网络剪枝的的背景：" class="headerlink" title="网络剪枝的的背景："></a>网络剪枝的的背景：</h5><ul>
+<li>过参数化</li>
+<li>轻量化设备的模型</li>
+<li>网络推理速度</li>
+</ul>
+<p>很自然的两个目标就是</p>
 <ul>
-<li>Three dimensions: depth, width, resolution.</li>
-<li>First, decides how much of each dimension should be pruned.</li>
+<li>accuracy</li>
+<li>模型大小</li>
+</ul>
+<p>最直观的思路，两个目标直接做多目标优化</p>
+<ul>
+<li>A Knee-Guided Evolutionary Algorithm for Compressing Deep Neural Networks    :heavy_check_mark:</li>
+<li>Evolutionary Shallowing Deep Neural Networks at Block Levels :heavy_check_mark:</li>
+<li>Multi-objective Magnitude-Based Pruning for Latency-Aware Deep Neural Network Compression :heavy_check_mark:</li>
+<li>A Multi-objective Particle Swarm Optimization for Neural Networks Pruning:heavy_check_mark:</li>
+<li>Pruning Deep Convolutional Neural Networks Architectures with Evolution Strategy  :heavy_check_mark:</li>
+</ul>
+<p>其他方法，</p>
+<ul>
+<li><p>CURATING: A multi-objective based pruning technique for CNN :heavy_check_mark:</p>
+</li>
+<li><p>L2PF - Learning to Prune Faster  :heavy_check_mark:</p>
+</li>
+<li><p>Efficient and Sparse Neural Networks by Pruning Weights in a Multi-objective Learning Approach  :heavy_check_mark:</p>
+</li>
+</ul>
+<p>idea：</p>
+<ul>
+<li>协同演化</li>
+<li>多目标</li>
+<li>learn to optimize </li>
 </ul>
 
       
@@ -329,15 +356,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2021/06/04/Neural-Network-Pruning/" rel="next" title="Neural Network Pruning">
+                <i class="fa fa-chevron-left"></i> Neural Network Pruning
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/06/04/Multi-Objective-Neural-Network-Pruning/" rel="prev" title="Multi-Objective Neural Network Pruning">
-                Multi-Objective Neural Network Pruning <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -451,7 +478,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Neural-Network-Pruning"><span class="nav-number">1.</span> <span class="nav-text">Neural Network Pruning</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E7%9B%AE%E6%A0%87%E5%89%AA%E6%9E%9D"><span class="nav-number">1.</span> <span class="nav-text">多目标剪枝</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%89%AA%E6%9E%9D%E7%9A%84%E7%9A%84%E8%83%8C%E6%99%AF%EF%BC%9A"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">网络剪枝的的背景：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
