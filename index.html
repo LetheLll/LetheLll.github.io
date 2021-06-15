@@ -455,8 +455,14 @@
             <h1 id="Neural-Network-Pruning"><a href="#Neural-Network-Pruning" class="headerlink" title="Neural Network Pruning"></a>Neural Network Pruning</h1><p>[HRank: Filter Pruning using High-Rank Feature Map](<a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Lin_HRank_Filter_Pruning_Using_High-Rank_Feature_Map_CVPR_2020_paper.pdf">HRank: Filter Pruning Using High-Rank Feature Map (thecvf.com)</a>)<em>[CVPR 20’]</em></p>
 <p>[Accelerate CNNs from Three Dimensions: A Comprehensive Pruning Framework](<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2010.04879.pdf">Accelerate CNNs from Three Dimensions: A Comprehensive Pruning Framework (arxiv.org)</a>) <em>[ICML 21’]</em></p>
 <ul>
-<li>Three dimensions: depth, width, resolution.</li>
-<li>First, decides how much of each dimension should be pruned.</li>
+<li>从三个维度考虑剪枝问题，即宽度、深度、输入分辨率。这和EfficientNet的想法类似，不过EfficientNet是在NAS的视角下考虑的。</li>
+<li>首先要决定每个维度减多少。</li>
+<li>转换成下面这个优化问题，$\mathcal{F}$是一个MAP（model accuracy predictor），$\mathcal{C}$是用来评估</li>
+</ul>
+<p>$$<br>\max_{d,w,r} a = \mathcal{F}(d,w,r), s.t. \mathcal{C}(d,w,r) = \tau<br>$$</p>
+<ul>
+<li> A model accuracy predictor(MAP)</li>
+<li></li>
 </ul>
 
           
